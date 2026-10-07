@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaddaf Hotel | Stay in Al Jaddaf, Dubai</title>
+<meta name="description" content="Comfortable rooms in Al Jaddaf, Dubai, close to the creek, the metro and the city's main districts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0C2B33;      /* creek at night */
+  --tide:#1F6F78;     /* shallow water */
+  --salt:#EEF3F2;     /* page background */
+  --mist:#D5E3E1;     /* dividers, soft fills */
+  --lantern:#E0A526;  /* accent */
+  --text:#17262B;
+  --display:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--text);background:var(--salt);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lantern);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{padding:20px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.mark{font-family:var(--display);font-weight:700;font-size:1.25rem;text-decoration:none;color:var(--ink)}
+nav{display:flex;gap:24px;align-items:center}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--tide)}
+@media(max-width:620px){nav a.hide{display:none}}
+
+/* buttons */
+.btn{display:inline-block;padding:13px 22px;border-radius:6px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid var(--ink)}
+.btn.solid{background:var(--ink);color:#fff}
+.btn.solid:hover{background:var(--tide);border-color:var(--tide)}
+.btn.line{color:var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+
+/* hero */
+.hero{padding:40px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.02em;color:var(--ink);margin-bottom:22px}
+.lead{font-size:1.2rem;max-width:34em;margin-bottom:30px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.art{background:var(--ink);border-radius:10px;padding:8px;overflow:hidden}
+.art svg{display:block;width:100%;height:auto}
+.dhow{animation:bob 7s ease-in-out infinite;transform-origin:50% 80%}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(7px) rotate(.6deg)}}
+@media(prefers-reduced-motion:reduce){.dhow{animation:none}html{scroll-behavior:auto}}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--mist)}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,3.5vw,2.5rem);line-height:1.1;letter-spacing:-.01em;color:var(--ink);margin-bottom:12px}
+.sub{max-width:36em;margin-bottom:36px}
+.rows{list-style:none;border-top:2px solid var(--ink)}
+.rows li{display:grid;grid-template-columns:220px 1fr auto;gap:24px;padding:22px 0;border-bottom:1px solid var(--mist);align-items:baseline}
+.rows h3{font-family:var(--display);font-size:1.3rem;color:var(--ink)}
+.rows a{font-weight:600;color:var(--tide)}
+@media(max-width:700px){.rows li{grid-template-columns:1fr;gap:6px}}
+
+.area{display:grid;grid-template-columns:1fr 1fr;gap:20px 48px}
+.area div{border-left:4px solid var(--lantern);padding-left:16px}
+.area h3{font-family:var(--display);font-size:1.15rem;color:var(--ink)}
+@media(max-width:700px){.area{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--ink);color:#fff;border-top:0}
+.contact h2{color:#fff}
+.contact .grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact dt{font-weight:600;color:var(--lantern);margin-top:14px}
+.contact dd a{text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4)}
+.contact .btn.solid{background:var(--lantern);border-color:var(--lantern);color:var(--ink);margin-top:8px}
+.contact .btn.solid:hover{background:#fff;border-color:#fff}
+@media(max-width:700px){.contact .grid{grid-template-columns:1fr}}
+
+footer{background:var(--ink);color:#9FB6B9;padding:22px 0;font-size:.9rem;border-top:1px solid rgba(255,255,255,.12)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="mark" href="#top">Jaddaf Hotel</a>
+    <nav aria-label="Main">
+      <a class="hide" href="#stay">Rooms</a>
+      <a class="hide" href="#area">The area</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Rest easy in Al Jaddaf</h1>
+        <p class="lead">Comfortable rooms in Dubai's creekside district, a short ride from the metro, the water and the city's main sights.</p>
+        <div class="cta">
+          <a class="btn solid" href="mailto:info@jaddafhotelllc.ae?subject=Booking%20request">Request a booking</a>
+          <a class="btn line" href="tel:+97140000000">Call reception</a>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="470" cy="110" r="46" fill="#E0A526"/>
+          <g class="dhow">
+            <path d="M298 40 L132 262 L318 262 Z" fill="#EEF3F2"/>
+            <path d="M310 90 L470 262 L330 262 Z" fill="#D5E3E1"/>
+            <rect x="296" y="36" width="4" height="232" fill="#EEF3F2"/>
+            <path d="M96 262 L520 262 L486 304 Q300 336 150 304 Z" fill="#1F6F78"/>
+            <path d="M96 262 L520 262 L514 272 L102 272 Z" fill="#E0A526"/>
+          </g>
+          <g fill="none" stroke="#1F6F78" stroke-width="3" stroke-linecap="round">
+            <path d="M30 346 Q75 332 120 346 T210 346 T300 346 T390 346 T480 346 T570 346"/>
+            <path d="M0 376 Q45 362 90 376 T180 376 T270 376 T360 376 T450 376 T540 376 T630 376"/>
+            <path d="M30 404 Q75 392 120 404 T210 404 T300 404 T390 404 T480 404 T570 404"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <section id="stay">
+    <div class="wrap">
+      <h2>Rooms</h2>
+      <p class="sub">Choose the room that suits your stay. Email or call us for current rates and availability.</p>
+      <!-- EDIT: replace these room names and descriptions with your real ones -->
+      <ul class="rows">
+        <li><h3>Standard room</h3><p>A comfortable base for short stays and business trips, with everything you need for a good night's rest.</p><a href="mailto:info@jaddafhotelllc.ae?subject=Standard%20room">Ask for rates</a></li>
+        <li><h3>Deluxe room</h3><p>More space to work or unwind, ideal for longer stays.</p><a href="mailto:info@jaddafhotelllc.ae?subject=Deluxe%20room">Ask for rates</a></li>
+        <li><h3>Suite</h3><p>A separate living area for families and guests who want extra room.</p><a href="mailto:info@jaddafhotelllc.ae?subject=Suite">Ask for rates</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="wrap">
+      <h2>Why Al Jaddaf</h2>
+      <p class="sub">A well-connected part of Dubai on the creek, known for its dhow yards and quick access to the rest of the city.</p>
+      <div class="area">
+        <div><h3>Al Jaddaf metro station</h3><p>Green Line access to Old Dubai, Downtown and beyond.</p></div>
+        <div><h3>Dubai Creek</h3><p>Waterfront walks and traditional dhows on your doorstep.</p></div>
+        <div><h3>Dubai Healthcare City</h3><p>Close by for medical visitors and their families.</p></div>
+        <div><h3>Old Dubai and Downtown</h3><p>Souks, museums and the city's main attractions within easy reach.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <h2>Plan your stay</h2>
+          <p>Tell us your dates and the number of guests. We will reply with rates and availability.</p>
+          <p><a class="btn solid" href="mailto:info@jaddafhotelllc.ae?subject=Booking%20request">Email reception</a></p>
+        </div>
+        <dl>
+          <!-- EDIT: replace the phone, email and address with your real details -->
+          <dt>Phone</dt><dd><a href="tel:+97140000000">+971 4 000 0000</a></dd>
+          <dt>Email</dt><dd><a href="mailto:info@jaddafhotelllc.ae">info@jaddafhotelllc.ae</a></dd>
+          <dt>Address</dt><dd>Al Jaddaf, Dubai, United Arab Emirates</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Jaddaf Hotel LLC. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
