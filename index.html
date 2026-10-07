@@ -1,298 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jaddaf Hotel | Stay in Al Jaddaf, Dubai</title>
-<meta name="description" content="Comfortable rooms in Al Jaddaf, Dubai, close to the creek, the metro and the city's main districts. Rooms, facilities, location and booking information.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#000;
-  --alt:#111;
-  --yellow:#FFD60A;
-  --moon:#FFE98A;
-  --text:#EDEDED;
-  --muted:#B3B3B3;
-  --line:#2B2B2B;
-  --display:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
-  --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);color:var(--text);background:var(--bg);line-height:1.65;font-size:17px}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaddaf Hotel | Stay in Al Jaddaf, Dubai</title>
+  <meta name="description" content="Comfortable rooms in Al Jaddaf, Dubai, close to Dubai Creek, the metro and the city's main attractions. Rooms, facilities, location and booking information.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Jaddaf Hotel | Stay in Al Jaddaf, Dubai">
+  <meta property="og:description" content="Comfortable rooms in Al Jaddaf, Dubai, close to Dubai Creek and the metro.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.example.com/jaddaf-hotel.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://www.example.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Jaddaf Hotel",
+    "description": "Comfortable rooms in Al Jaddaf, Dubai, close to the creek, the metro and the city's main districts.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    },
+    "telephone": "+97140000000",
+    "email": "info@jaddafhotelllc.ae",
+    "url": "https://www.example.com/"
+  }
+  </script>
+  <style>
+    :root{
+      --bg:#000;
+      --alt:#111;
+      --yellow:#FFD60A;
+      --moon:#FFE98A;
+      --text:#EDEDED;
+      --muted:#B3B3B3;
+      --line:#2B2B2B;
+      --display:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+      --body:"Instrument Sans","Segoe UI",Arial,sans-serif;
+      --card:#151515;
+      --white:#fff;
+      --shadow:0 30px 60px rgba(0,0,0,.28);
+    }
 
-/* header */
-header{position:absolute;top:0;left:0;right:0;z-index:5;padding:22px 0}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
-.mark{font-family:var(--display);font-weight:700;font-size:1.3rem;text-decoration:none;color:var(--yellow)}
-nav{display:flex;gap:24px;align-items:center}
-nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--text)}
-nav a:hover{color:var(--yellow)}
-@media(max-width:700px){nav a.hide{display:none}}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);color:var(--text);background:var(--bg);line-height:1.65;font-size:17px}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative}
+    .skip-link{position:absolute;left:-9999px;top:auto}
+    .skip-link:focus{left:20px;top:20px;z-index:60;background:#fff;color:#000;padding:12px 16px;border-radius:6px}
 
-/* buttons */
-.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid var(--yellow)}
-.btn.solid{background:var(--yellow);color:#000}
-.btn.solid:hover{background:#fff;border-color:#fff}
-.btn.line{color:var(--yellow)}
-.btn.line:hover{background:var(--yellow);color:#000}
+    /* header */
+    header{position:absolute;top:0;left:0;right:0;z-index:20;padding:22px 0}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .mark{font-family:var(--display);font-weight:700;font-size:1.3rem;text-decoration:none;color:var(--yellow)}
+    nav{display:flex;gap:24px;align-items:center}
+    nav a{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--text)}
+    nav a:hover{color:var(--yellow)}
+    @media(max-width:700px){nav a.hide{display:none}}
 
-/* hero: night sky */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
-  background:radial-gradient(ellipse at 50% 108%,rgba(255,214,10,.22),transparent 55%),#000;padding:120px 0 150px}
-.stars{position:absolute;top:0;left:0;width:2px;height:2px;border-radius:50%;background:transparent;
-  box-shadow:6vw 8vh #fff,14vw 24vh #bbb,22vw 12vh #fff,31vw 36vh #999,38vw 6vh #fff,47vw 20vh #ccc,55vw 10vh #fff,
-  63vw 30vh #aaa,70vw 5vh #fff,78vw 26vh #ccc,86vw 14vh #fff,93vw 34vh #aaa,10vw 44vh #888,27vw 52vh #ccc,
-  44vw 46vh #888,59vw 48vh #fff,74vw 42vh #999,90vw 52vh #ccc,3vw 30vh #ccc,96vw 8vh #fff,35vw 18vh #fff,66vw 18vh #ddd}
-.moon{position:absolute;top:12%;right:7%;width:clamp(130px,21vw,250px);filter:drop-shadow(0 0 34px rgba(255,214,10,.35))}
-.moon svg{display:block;width:100%;height:auto}
-h1{font-family:var(--display);font-weight:700;font-size:clamp(2.8rem,7vw,5.2rem);line-height:1;letter-spacing:-.02em;color:#fff;margin-bottom:22px;max-width:9em}
-h1 span{color:var(--yellow)}
-.lead{font-size:1.2rem;max-width:30em;margin-bottom:30px;color:var(--text)}
-.cta{display:flex;flex-wrap:wrap;gap:12px}
-.hero .copy{position:relative;z-index:2}
+    /* buttons */
+    .btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid var(--yellow);transition:all .2s ease}
+    .btn.solid{background:var(--yellow);color:#000}
+    .btn.solid:hover{background:#fff;border-color:#fff}
+    .btn.line{color:var(--yellow)}
+    .btn.line:hover{background:var(--yellow);color:#000}
 
-/* birds */
-.bird{position:absolute;left:0;top:var(--t);width:var(--s);color:#F5E7A1;opacity:.85;animation:fly var(--d) linear infinite;animation-delay:var(--de);z-index:1}
-.bird svg{display:block;width:100%;height:auto;animation:flap .7s ease-in-out infinite;transform-origin:50% 60%}
-@keyframes fly{from{transform:translateX(-12vw)}to{transform:translateX(112vw)}}
-@keyframes flap{50%{transform:scaleY(.35)}}
+    .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 108%,rgba(255,214,10,.22),transparent 55%),#000;padding:120px 0 150px}
+    .stars{position:absolute;top:0;left:0;width:2px;height:2px;border-radius:50%;background:transparent;box-shadow:6vw 8vh #fff,14vw 24vh #bbb,22vw 12vh #fff,31vw 36vh #999,38vw 6vh #fff,47vw 20vh #ccc,55vw 10vh #fff,63vw 30vh #aaa,70vw 5vh #fff,78vw 26vh #ccc,86vw 14vh #fff,93vw 34vh #aaa,10vw 44vh #888,27vw 52vh #ccc,44vw 46vh #888,59vw 48vh #fff,74vw 42vh #999,90vw 52vh #ccc,3vw 30vh #ccc,96vw 8vh #fff,35vw 18vh #fff,66vw 18vh #ddd}
+    .moon{position:absolute;top:12%;right:7%;width:clamp(130px,21vw,250px);filter:drop-shadow(0 0 34px rgba(255,214,10,.35))}
+    .moon svg{display:block;width:100%;height:auto}
+    .hero .copy{position:relative;z-index:2;max-width:640px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(255,214,10,.5);border-radius:999px;color:var(--yellow);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,214,10,.05);margin-bottom:18px}
+    .eyebrow::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--yellow);box-shadow:0 0 15px rgba(255,214,10,.8)}
+    h1{font-family:var(--display);font-weight:700;font-size:clamp(2.8rem,7vw,5.2rem);line-height:1;letter-spacing:-.02em;color:#fff;margin-bottom:22px;max-width:9em}
+    h1 span{color:var(--yellow)}
+    .lead{font-size:1.2rem;max-width:30em;margin-bottom:30px;color:var(--text)}
+    .cta{display:flex;flex-wrap:wrap;gap:12px}
+    .mini-stats{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px}
+    .mini-stats div{padding:10px 0;border-top:1px solid rgba(255,255,255,.14);min-width:140px}
+    .mini-stats strong{display:block;font-family:var(--display);font-size:1.5rem;color:var(--white)}
+    .mini-stats span{color:var(--muted);font-size:.9rem}
 
-/* creek + dhow */
-.creek{position:absolute;left:0;right:0;bottom:0;height:150px;pointer-events:none}
-.creek svg{position:absolute;right:6%;bottom:0;width:min(520px,70vw);height:auto}
-.dhow{animation:bob 7s ease-in-out infinite;transform-origin:50% 80%}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(6px) rotate(.6deg)}}
-@media(prefers-reduced-motion:reduce){.dhow,.bird,.bird svg{animation:none}.bird{display:none}html{scroll-behavior:auto}}
+    /* birds */
+    .bird{position:absolute;left:0;top:var(--t);width:var(--s);color:#F5E7A1;opacity:.85;animation:fly var(--d) linear infinite;animation-delay:var(--de);z-index:1}
+    .bird svg{display:block;width:100%;height:auto;animation:flap .7s ease-in-out infinite;transform-origin:50% 60%}
+    @keyframes fly{from{transform:translateX(-12vw)}to{transform:translateX(112vw)}}
+    @keyframes flap{50%{transform:scaleY(.35)}}
 
-/* sections */
-section{padding:80px 0;border-top:1px solid var(--line)}
-section.alt{background:var(--alt)}
-h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.1;letter-spacing:-.01em;color:#fff;margin-bottom:12px}
-.sub{max-width:38em;margin-bottom:40px;color:var(--muted)}
-h3{font-family:var(--display);color:var(--yellow)}
+    /* creek + dhow */
+    .creek{position:absolute;left:0;right:0;bottom:0;height:150px;pointer-events:none}
+    .creek svg{position:absolute;right:6%;bottom:0;width:min(520px,70vw);height:auto}
+    .dhow{animation:bob 7s ease-in-out infinite;transform-origin:50% 80%}
+    @keyframes bob{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(6px) rotate(.6deg)}}
 
-.rows{list-style:none;border-top:2px solid var(--yellow)}
-.rows li{display:grid;grid-template-columns:200px 1fr auto;gap:28px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
-.rows h3{font-size:1.35rem}
-.rows p{margin-bottom:6px}
-.rows .feat{color:var(--muted);font-size:.95rem}
-.rows a.ask{font-weight:600;color:var(--yellow);white-space:nowrap}
-@media(max-width:760px){.rows li{grid-template-columns:1fr;gap:6px}}
+    /* sections */
+    section{padding:80px 0;border-top:1px solid var(--line)}
+    section.alt{background:var(--alt)}
+    h2{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.1;letter-spacing:-.01em;color:#fff;margin-bottom:12px}
+    .sub{max-width:38em;margin-bottom:40px;color:var(--muted)}
+    h3{font-family:var(--display);color:var(--yellow)}
 
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px 48px}
-.grid2 div{border-left:4px solid var(--yellow);padding-left:16px}
-.grid2 h3{font-size:1.15rem;margin-bottom:2px}
-.grid2 p{color:var(--muted)}
-@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+    .rows{list-style:none;border-top:2px solid var(--yellow)}
+    .rows li{display:grid;grid-template-columns:200px 1fr auto;gap:28px;padding:26px 0;border-bottom:1px solid var(--line);align-items:start}
+    .rows h3{font-size:1.35rem}
+    .rows p{margin-bottom:6px}
+    .rows .feat{color:var(--muted);font-size:.95rem}
+    .rows a.ask{font-weight:600;color:var(--yellow);white-space:nowrap}
+    @media(max-width:760px){.rows li{grid-template-columns:1fr;gap:6px}}
 
-.facts{display:grid;grid-template-columns:200px 1fr;gap:0;border-top:2px solid var(--yellow)}
-.facts dt,.facts dd{padding:16px 0;border-bottom:1px solid var(--line)}
-.facts dt{font-family:var(--display);font-weight:700;color:var(--yellow)}
-@media(max-width:600px){.facts{grid-template-columns:1fr}.facts dt{border-bottom:0;padding-bottom:0}}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px 48px}
+    .grid2 div{border-left:4px solid var(--yellow);padding-left:16px}
+    .grid2 h3{font-size:1.15rem;margin-bottom:2px}
+    .grid2 p{color:var(--muted)}
+    @media(max-width:700px){.grid2{grid-template-columns:1fr}}
 
-details{border-bottom:1px solid var(--line);padding:18px 0}
-details:first-of-type{border-top:2px solid var(--yellow)}
-summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.15rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:16px}
-summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--yellow);font-size:1.5rem;line-height:1}
-details[open] summary::after{content:"\2212"}
-details p{margin-top:10px;color:var(--muted);max-width:44em}
+    .facts{display:grid;grid-template-columns:200px 1fr;gap:0;border-top:2px solid var(--yellow)}
+    .facts dt,.facts dd{padding:16px 0;border-bottom:1px solid var(--line)}
+    .facts dt{font-family:var(--display);font-weight:700;color:var(--yellow)}
+    @media(max-width:600px){.facts{grid-template-columns:1fr}.facts dt{border-bottom:0;padding-bottom:0}}
 
-/* contact */
-.contact{background:var(--yellow);color:#000;border-top:0}
-.contact h2{color:#000}
-.contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.contact p{max-width:30em}
-.contact dt{font-weight:700;margin-top:14px}
-.contact dd a{text-decoration:none;border-bottom:2px solid #000}
-.contact .btn{background:#000;border-color:#000;color:var(--yellow);margin:16px 12px 0 0}
-.contact .btn:hover{background:#fff;border-color:#fff;color:#000}
-.contact .btn.line{background:transparent;color:#000}
-.contact .btn.line:hover{background:#000;color:var(--yellow)}
-@media(max-width:700px){.contact .cols{grid-template-columns:1fr}}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .review{background:var(--card);border:1px solid var(--line);padding:24px;border-radius:14px;box-shadow:var(--shadow)}
+    .review .stars{position:relative;box-shadow:none;display:flex;gap:4px;margin-bottom:10px;letter-spacing:1px;color:var(--yellow);font-size:1.05rem}
+    .review p{color:var(--text);margin-bottom:14px}
+    .review strong{font-family:var(--display);font-size:1.05rem;color:#fff}
+    @media(max-width:900px){.reviews{grid-template-columns:1fr}}
 
-footer{background:#000;color:var(--muted);padding:26px 0;font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-footer a{text-decoration:none;margin-left:18px}
-footer a:hover{color:var(--yellow)}
-</style>
+    details{border-bottom:1px solid var(--line);padding:18px 0}
+    details:first-of-type{border-top:2px solid var(--yellow)}
+    summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.15rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:16px}
+    summary::-webkit-details-marker{display:none}
+    summary::after{content:"+";color:var(--yellow);font-size:1.5rem;line-height:1}
+    details[open] summary::after{content:"\2212"}
+    details p{margin-top:10px;color:var(--muted);max-width:44em}
+
+    /* contact */
+    .contact{background:var(--yellow);color:#000;border-top:0}
+    .contact h2{color:#000}
+    .contact .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+    .contact p{max-width:30em}
+    .contact dt{font-weight:700;margin-top:14px}
+    .contact dd a{text-decoration:none;border-bottom:2px solid #000}
+    .contact .btn{background:#000;border-color:#000;color:var(--yellow);margin:16px 12px 0 0}
+    .contact .btn:hover{background:#fff;border-color:#fff;color:#000}
+    .contact .btn.line{background:transparent;color:#000}
+    .contact .btn.line:hover{background:#000;color:var(--yellow)}
+    .booking-form{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.2);padding:20px;border-radius:12px;margin-top:16px}
+    .booking-form form{display:grid;gap:12px}
+    .booking-form label{font-weight:700;font-size:.92rem}
+    .booking-form input,.booking-form select,.booking-form textarea{width:100%;padding:12px 14px;border:1px solid rgba(0,0,0,.35);border-radius:8px;background:rgba(255,255,255,.75);font:inherit;color:#000}
+    .booking-form textarea{min-height:110px;resize:vertical}
+    .booking-form .submit{display:flex;justify-content:flex-start;margin-top:6px}
+    @media(max-width:700px){.contact .cols{grid-template-columns:1fr}}
+
+    footer{background:#000;color:var(--muted);padding:26px 0;font-size:.9rem}
+    footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    footer a{text-decoration:none;margin-left:18px}
+    footer a:hover{color:var(--yellow)}
+
+    .mobile-cta{display:none}
+    @media(max-width:700px){
+      .mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px;background:rgba(0,0,0,.9);border-top:1px solid var(--line);backdrop-filter:blur(8px)}
+      .mobile-cta a{flex:1;padding:12px 10px;border-radius:8px;text-align:center;text-decoration:none;font-weight:700}
+      .mobile-cta .primary{background:var(--yellow);color:#000}
+      .mobile-cta .secondary{border:1px solid var(--yellow);color:var(--yellow)}
+      body{padding-bottom:72px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .dhow,.bird,.bird svg{animation:none}
+      .bird{display:none}
+    }
+  </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- bird shape used by the flying birds -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="bird" viewBox="0 0 30 14"><path d="M1 10 Q8 -2 15 9 Q22 -2 29 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
-</svg>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bird" viewBox="0 0 30 14"><path d="M1 10 Q8 -2 15 9 Q22 -2 29 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  </svg>
 
-<header>
-  <div class="wrap">
-    <a class="mark" href="#top">Jaddaf Hotel</a>
-    <nav aria-label="Main">
-      <a class="hide" href="#stay">Rooms</a>
-      <a class="hide" href="#facilities">Facilities</a>
-      <a class="hide" href="#area">Location</a>
-      <a class="hide" href="#faq">Questions</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-  <div class="hero">
-    <div class="stars" aria-hidden="true"></div>
-    <div class="moon" aria-hidden="true">
-      <svg viewBox="0 0 200 200"><defs><mask id="cut"><rect width="200" height="200" fill="#fff"/><circle cx="128" cy="86" r="72" fill="#000"/></mask></defs><circle cx="100" cy="100" r="82" fill="#FFE98A" mask="url(#cut)"/></svg>
+  <header>
+    <div class="wrap">
+      <a class="mark" href="#top">Jaddaf Hotel</a>
+      <nav aria-label="Main">
+        <a class="hide" href="#stay">Rooms</a>
+        <a class="hide" href="#facilities">Facilities</a>
+        <a class="hide" href="#area">Location</a>
+        <a class="hide" href="#faq">Questions</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- flying birds: --t height, --s size, --d speed, --de start offset -->
-    <div class="bird" style="--t:16%;--s:34px;--d:30s;--de:-6s" aria-hidden="true"><svg viewBox="0 0 30 14"><use href="#bird"/></svg></div>
-    <div class="bird" style="--t:24%;--s:24px;--d:36s;--de:-18s" aria-hidden="true"><svg viewBox="0 0 30 14" style="animation-delay:-.2s"><use href="#bird"/></svg></div>
-    <div class="bird" style="--t:30%;--s:28px;--d:26s;--de:-12s" aria-hidden="true"><svg viewBox="0 0 30 14" style="animation-delay:-.4s"><use href="#bird"/></svg></div>
-    <div class="bird" style="--t:42%;--s:20px;--d:40s;--de:-30s" aria-hidden="true"><svg viewBox="0 0 30 14"><use href="#bird"/></svg></div>
-    <div class="bird" style="--t:50%;--s:30px;--d:32s;--de:-2s" aria-hidden="true"><svg viewBox="0 0 30 14" style="animation-delay:-.3s"><use href="#bird"/></svg></div>
-
-    <div class="wrap copy">
-      <h1>Rest easy in <span>Al Jaddaf</span></h1>
-      <p class="lead">Comfortable rooms in Dubai's creekside district, a short ride from the metro, the water and the city's main sights.</p>
-      <div class="cta">
-        <a class="btn solid" href="mailto:info@jaddafhotelllc.ae?subject=Booking%20request">Request a booking</a>
-        <a class="btn line" href="tel:+97140000000">Call reception</a>
+  <main id="main-content">
+    <div class="hero" id="top">
+      <div class="stars" aria-hidden="true"></div>
+      <div class="moon" aria-hidden="true">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs>
+            <mask id="cut">
+              <rect width="200" height="200" fill="#fff"/>
+              <circle cx="128" cy="86" r="72" fill="#000"/>
+            </mask>
+          </defs>
+          <circle cx="100" cy="100" r="82" fill="#FFE98A" mask="url(#cut)"/>
+          <circle cx="100" cy="100" r="82" fill="none" stroke="#FFE98A" stroke-opacity=".35" stroke-width="2"/>
+        </svg>
       </div>
-    </div>
 
-    <div class="creek" aria-hidden="true">
-      <svg viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg">
-        <g class="dhow">
-          <path d="M298 10 L150 120 L318 120 Z" fill="#F5E7A1"/>
-          <path d="M310 40 L460 120 L330 120 Z" fill="#B89B1B"/>
-          <rect x="296" y="8" width="4" height="118" fill="#F5E7A1"/>
-          <path d="M110 120 L510 120 L480 150 Q300 172 150 150 Z" fill="#000" stroke="#FFD60A" stroke-width="3"/>
-        </g>
-        <g fill="none" stroke="#FFD60A" stroke-width="2.5" stroke-linecap="round" opacity=".7">
-          <path d="M0 160 Q45 148 90 160 T180 160 T270 160 T360 160 T450 160 T540 160 T630 160"/>
-          <path d="M0 178 Q45 166 90 178 T180 178 T270 178 T360 178 T450 178 T540 178 T630 178" opacity=".5"/>
-        </g>
-      </svg>
-    </div>
-  </div>
+      <div class="bird" style="--t:16%;--s:34px;--d:30s;--de:-6s" aria-hidden="true"><svg viewBox="0 0 30 14"><use href="#bird"/></svg></div>
+      <div class="bird" style="--t:24%;--s:24px;--d:36s;--de:-18s" aria-hidden="true"><svg viewBox="0 0 30 14" style="animation-delay:-.2s"><use href="#bird"/></svg></div>
+      <div class="bird" style="--t:30%;--s:28px;--d:26s;--de:-12s" aria-hidden="true"><svg viewBox="0 0 30 14" style="animation-delay:-.4s"><use href="#bird"/></svg></div>
+      <div class="bird" style="--t:42%;--s:20px;--d:40s;--de:-30s" aria-hidden="true"><svg viewBox="0 0 30 14"><use href="#bird"/></svg></div>
+      <div class="bird" style="--t:50%;--s:30px;--d:32s;--de:-2s" aria-hidden="true"><svg viewBox="0 0 30 14" style="animation-delay:-.3s"><use href="#bird"/></svg></div>
 
-  <section id="stay">
-    <div class="wrap">
-      <h2>Rooms</h2>
-      <p class="sub">Every room is set up for a good night's rest after a day in the city. Email or call us for current rates and availability.</p>
-      <!-- EDIT: replace room names, descriptions and features with your real ones -->
-      <ul class="rows">
-        <li>
-          <h3>Standard room</h3>
-          <div><p>A comfortable base for short stays and business trips.</p><p class="feat">Queen or twin beds, work desk, air conditioning, flat-screen TV, private bathroom, free Wi-Fi.</p></div>
-          <a class="ask" href="mailto:info@jaddafhotelllc.ae?subject=Standard%20room">Ask for rates</a>
-        </li>
-        <li>
-          <h3>Deluxe room</h3>
-          <div><p>More space to work or unwind, ideal for longer stays.</p><p class="feat">Larger layout, seating corner, work desk, tea and coffee facilities, free Wi-Fi.</p></div>
-          <a class="ask" href="mailto:info@jaddafhotelllc.ae?subject=Deluxe%20room">Ask for rates</a>
-        </li>
-        <li>
-          <h3>Suite</h3>
-          <div><p>A separate living area for families and guests who want extra room.</p><p class="feat">King bed, separate living room, extra seating, space for up to four guests.</p></div>
-          <a class="ask" href="mailto:info@jaddafhotelllc.ae?subject=Suite">Ask for rates</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="facilities" class="alt">
-    <div class="wrap">
-      <h2>Facilities</h2>
-      <p class="sub">What you can count on during your stay.</p>
-      <!-- EDIT: keep only the facilities your hotel really offers -->
-      <div class="grid2">
-        <div><h3>24-hour reception</h3><p>Check in late or ask for help at any hour.</p></div>
-        <div><h3>Restaurant and room dining</h3><p>Breakfast, lunch and dinner, with meals brought to your room on request.</p></div>
-        <div><h3>Meetings and events</h3><p>Space for business meetings, small gatherings and celebrations.</p></div>
-        <div><h3>Wi-Fi throughout</h3><p>Stay connected in your room and in the public areas.</p></div>
-        <div><h3>Parking</h3><p>Parking for guests arriving by car.</p></div>
-        <div><h3>Airport transfers</h3><p>Ask us to arrange a pickup or drop-off.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="area">
-    <div class="wrap">
-      <h2>Why Al Jaddaf</h2>
-      <p class="sub">A well-connected part of Dubai on the creek, known for its dhow yards and quick access to the rest of the city.</p>
-      <div class="grid2">
-        <div><h3>Al Jaddaf metro station</h3><p>Green Line access to Old Dubai, Downtown and beyond.</p></div>
-        <div><h3>Dubai Creek</h3><p>Waterfront walks and traditional dhows on your doorstep.</p></div>
-        <div><h3>Dubai Healthcare City</h3><p>Close by for medical visitors and their families.</p></div>
-        <div><h3>Old Dubai and Downtown</h3><p>Souks, museums and the city's main attractions within easy reach.</p></div>
-        <div><h3>Dubai International Airport</h3><p>Roughly a 10 to 15 minute drive, depending on traffic.</p></div>
-        <div><h3>Business and leisure</h3><p>Handy for conferences, appointments and sightseeing alike.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="info" class="alt">
-    <div class="wrap">
-      <h2>Stay information</h2>
-      <p class="sub">The practical details, in one place.</p>
-      <!-- EDIT: confirm these times and policies -->
-      <dl class="facts">
-        <dt>Check-in</dt><dd>From 2:00 PM</dd>
-        <dt>Check-out</dt><dd>By 12:00 PM</dd>
-        <dt>Reception</dt><dd>Open 24 hours</dd>
-        <dt>Languages</dt><dd>English and Arabic</dd>
-        <dt>Booking</dt><dd>Email or call us with your dates and number of guests</dd>
-      </dl>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="wrap">
-      <h2>Questions</h2>
-      <p class="sub">Quick answers before you book.</p>
-      <details><summary>How do I book a room?</summary><p>Email info@jaddafhotelllc.ae or call reception with your dates and the number of guests. We reply with rates and availability.</p></details>
-      <details><summary>Can you arrange airport transfers?</summary><p>Yes, ask us when you book and we will arrange a pickup or drop-off for you.</p></details>
-      <details><summary>Is there parking?</summary><p>Yes, parking is available for guests arriving by car. Let us know if you need a space reserved.</p></details>
-      <details><summary>Do you host meetings or events?</summary><p>We can host business meetings and small gatherings. Contact us with your date and group size for details.</p></details>
-      <details><summary>What is nearby?</summary><p>Al Jaddaf metro station, Dubai Creek, Dubai Healthcare City and the routes to Old Dubai and Downtown are all close by.</p></details>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="wrap">
-      <div class="cols">
-        <div>
-          <h2>Plan your stay</h2>
-          <p>Tell us your dates and the number of guests. We will reply with rates and availability.</p>
-          <a class="btn" href="mailto:info@jaddafhotelllc.ae?subject=Booking%20request">Email reception</a>
-          <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Jaddaf+Dubai" target="_blank" rel="noopener">Open in Maps</a>
+      <div class="wrap copy">
+        <div class="eyebrow">Creekside comfort</div>
+        <h1>Rest easy in <span>Al Jaddaf</span></h1>
+        <p class="lead">Comfortable rooms in Dubai's creekside district, a short ride from the metro, the water and the city's main sights.</p>
+        <div class="cta">
+          <a class="btn solid" href="mailto:info@jaddafhotelllc.ae?subject=Check%20availability">Check availability</a>
+          <a class="btn line" href="tel:+97140000000">Call reception</a>
         </div>
-        <dl>
-          <!-- EDIT: replace the phone, email and address with your real details -->
-          <dt>Phone</dt><dd><a href="tel:+97140000000">+971 4 000 0000</a></dd>
-          <dt>Email</dt><dd><a href="mailto:info@jaddafhotelllc.ae">info@jaddafhotelllc.ae</a></dd>
-          <dt>Address</dt><dd>Al Jaddaf, Dubai, United Arab Emirates</dd>
-          <dt>Reception hours</dt><dd>Open 24 hours, every day</dd>
+        <div class="mini-stats" aria-label="Hotel highlights">
+          <div><strong>24/7</strong><span>Reception</span></div>
+          <div><strong>10 min</strong><span>To Dubai Creek</span></div>
+          <div><strong>Easy</strong><span>Metro access</span></div>
+        </div>
+      </div>
+
+      <div class="creek" aria-hidden="true">
+        <svg viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg">
+          <g class="dhow">
+            <path d="M298 10 L150 120 L318 120 Z" fill="#F5E7A1"/>
+            <path d="M310 40 L460 120 L330 120 Z" fill="#B89B1B"/>
+            <rect x="296" y="8" width="4" height="118" fill="#F5E7A1"/>
+            <path d="M110 120 L510 120 L480 150 Q300 172 150 150 Z" fill="#000" stroke="#FFD60A" stroke-width="3"/>
+          </g>
+          <g fill="none" stroke="#FFD60A" stroke-width="2.5" stroke-linecap="round" opacity=".7">
+            <path d="M0 160 Q45 148 90 160 T180 160 T270 160 T360 160 T450 160 T540 160 T630 160"/>
+            <path d="M0 178 Q45 166 90 178 T180 178 T270 178 T360 178 T450 178 T540 178 T630 178" opacity=".5"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <section id="stay">
+      <div class="wrap">
+        <h2>Rooms</h2>
+        <p class="sub">Every room is set up for a good night's rest after a day in the city. Email or call us for current rates and availability.</p>
+        <ul class="rows">
+          <li>
+            <h3>Standard room</h3>
+            <div>
+              <p>A comfortable base for short stays and business trips.</p>
+              <p class="feat">Queen or twin beds, work desk, air conditioning, flat-screen TV, private bathroom and complimentary Wi-Fi.</p>
+            </div>
+            <a class="ask" href="mailto:info@jaddafhotelllc.ae?subject=Standard%20room">Ask for rates</a>
+          </li>
+          <li>
+            <h3>Deluxe room</h3>
+            <div>
+              <p>More space to work or unwind, ideal for longer stays.</p>
+              <p class="feat">Larger layout, sitting area, tea and coffee facilities, work desk and upgraded comfort details.</p>
+            </div>
+            <a class="ask" href="mailto:info@jaddafhotelllc.ae?subject=Deluxe%20room">Ask for rates</a>
+          </li>
+          <li>
+            <h3>Suite</h3>
+            <div>
+              <p>A separate living area for families and guests who want extra room.</p>
+              <p class="feat">King bed, lounge area, extra seating and space for up to four guests.</p>
+            </div>
+            <a class="ask" href="mailto:info@jaddafhotelllc.ae?subject=Suite">Ask for rates</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="facilities" class="alt">
+      <div class="wrap">
+        <h2>Facilities</h2>
+        <p class="sub">What you can count on during your stay.</p>
+        <div class="grid2">
+          <div><h3>24-hour reception</h3><p>Check in late or ask for help at any hour.</p></div>
+          <div><h3>Restaurant and room dining</h3><p>Breakfast, lunch and dinner, with meals brought to your room on request.</p></div>
+          <div><h3>Meetings and events</h3><p>Space for business meetings, small gatherings and celebrations.</p></div>
+          <div><h3>Wi-Fi throughout</h3><p>Stay connected in your room and in the public areas.</p></div>
+          <div><h3>Parking</h3><p>Parking available for guests arriving by car.</p></div>
+          <div><h3>Airport transfers</h3><p>Ask us to arrange a pickup or drop-off.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="area">
+      <div class="wrap">
+        <h2>Why Al Jaddaf</h2>
+        <p class="sub">A well-connected part of Dubai on the creek, known for its dhow yards and quick access to the rest of the city.</p>
+        <div class="grid2">
+          <div><h3>Al Jaddaf metro station</h3><p>Green Line access to Old Dubai, Downtown and beyond.</p></div>
+          <div><h3>Dubai Creek</h3><p>Waterfront walks and traditional dhows on your doorstep.</p></div>
+          <div><h3>Dubai Healthcare City</h3><p>Close by for medical visitors and their families.</p></div>
+          <div><h3>Old Dubai and Downtown</h3><p>Souks, museums and the city's main attractions within easy reach.</p></div>
+          <div><h3>Dubai International Airport</h3><p>Roughly a 10 to 15 minute drive, depending on traffic.</p></div>
+          <div><h3>Business and leisure</h3><p>Handy for conferences, appointments and sightseeing alike.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="alt">
+      <div class="wrap">
+        <h2>Guest feedback</h2>
+        <p class="sub">A few reasons guests come back to Al Jaddaf.</p>
+        <div class="reviews" aria-label="Customer reviews">
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“A calm, comfortable stay with excellent access to the metro and the creek. The room was clean and the staff were very helpful.”</p>
+            <strong>— Business guest</strong>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“The location is convenient for both work and sightseeing, and the team made the check-in process easy and quick.”</p>
+            <strong>— Weekend traveller</strong>
+          </article>
+          <article class="review">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Comfortable rooms and a quiet area, with easy access to Dubai’s major districts. A very practical place to stay.”</p>
+            <strong>— Family visitor</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="alt">
+      <div class="wrap">
+        <h2>Stay information</h2>
+        <p class="sub">The practical details, in one place.</p>
+        <dl class="facts">
+          <dt>Check-in</dt><dd>From 2:00 PM</dd>
+          <dt>Check-out</dt><dd>By 12:00 PM</dd>
+          <dt>Reception</dt><dd>Open 24 hours</dd>
+          <dt>Languages</dt><dd>English and Arabic</dd>
+          <dt>Booking</dt><dd>Email or call us with your dates and number of guests</dd>
         </dl>
       </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>Questions</h2>
+        <p class="sub">Quick answers before you book.</p>
+        <details><summary>How do I book a room?</summary><p>Email info@jaddafhotelllc.ae or call reception with your dates and the number of guests. We reply with rates and availability.</p></details>
+        <details><summary>Can you arrange airport transfers?</summary><p>Yes, ask us when you book and we will arrange a pickup or drop-off for you.</p></details>
+        <details><summary>Is there parking?</summary><p>Yes, parking is available for guests arriving by car. Let us know if you need a space reserved.</p></details>
+        <details><summary>Do you host meetings or events?</summary><p>We can host business meetings and small gatherings. Contact us with your date and group size for details.</p></details>
+        <details><summary>What is nearby?</summary><p>Al Jaddaf metro station, Dubai Creek, Dubai Healthcare City and the routes to Old Dubai and Downtown are all close by.</p></details>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <h2>Plan your stay</h2>
+            <p>Tell us your dates and the number of guests. We will reply with rates and availability.</p>
+            <a class="btn" href="mailto:info@jaddafhotelllc.ae?subject=Booking%20request">Email reception</a>
+            <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Jaddaf+Dubai" target="_blank" rel="noopener">Open in Maps</a>
+
+            <div class="booking-form" aria-label="Booking form">
+              <form action="mailto:info@jaddafhotelllc.ae" method="post" enctype="text/plain">
+                <div>
+                  <label for="dates">Dates</label>
+                  <input id="dates" name="dates" type="text" placeholder="Check-in / Check-out">
+                </div>
+                <div>
+                  <label for="guests">Guests</label>
+                  <input id="guests" name="guests" type="number" min="1" max="10" placeholder="2">
+                </div>
+                <div>
+                  <label for="room">Room type</label>
+                  <select id="room" name="room">
+                    <option>Standard room</option>
+                    <option>Deluxe room</option>
+                    <option>Suite</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="notes">Notes</label>
+                  <textarea id="notes" name="notes" placeholder="Tell us about your stay, transport needs or special requests."></textarea>
+                </div>
+                <div class="submit">
+                  <button class="btn solid" type="submit">Send booking request</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <dl>
+            <dt>Phone</dt><dd><a href="tel:+97140000000">+971 4 000 0000</a></dd>
+            <dt>Email</dt><dd><a href="mailto:info@jaddafhotelllc.ae">info@jaddafhotelllc.ae</a></dd>
+            <dt>Address</dt><dd>Al Jaddaf, Dubai, United Arab Emirates</dd>
+            <dt>Reception hours</dt><dd>Open 24 hours, every day</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Jaddaf Hotel LLC. All rights reserved.</span>
+      <span><a href="#stay">Rooms</a><a href="#facilities">Facilities</a><a href="#area">Location</a><a href="#contact">Contact</a></span>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="wrap">
-    <span>&copy; 2026 Jaddaf Hotel LLC. All rights reserved.</span>
-    <span><a href="#stay">Rooms</a><a href="#facilities">Facilities</a><a href="#area">Location</a><a href="#contact">Contact</a></span>
+  <div class="mobile-cta" aria-label="Quick actions">
+    <a class="primary" href="mailto:info@jaddafhotelllc.ae?subject=Booking%20request">Book</a>
+    <a class="secondary" href="tel:+97140000000">Call</a>
   </div>
-</footer>
-
 </body>
 </html>
